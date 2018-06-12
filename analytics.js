@@ -2,7 +2,7 @@ var digitalData = {
   page: {
     pageInfo: {
       analytics: {
-        category: "Demo (Watson Platform)",
+        category: 'Demo (Watson Platform)',
       }
     }
   }

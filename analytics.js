@@ -14,5 +14,6 @@ function loadAnalytics() {
   document.head.appendChild(idaScript);
 }
 
-
-window.addEventListener('load', loadAnalytics);
+if (window.location.href.indexOf('.bluemix.net') !== -1) {
+  window.addEventListener('load', loadAnalytics);
+}

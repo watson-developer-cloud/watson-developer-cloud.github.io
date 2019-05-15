@@ -34,11 +34,11 @@
           the
         </span>
         <span class="app-name"></span>
-          <span>
-            application (“the Application”). By using the Application, you
-            agree to these Terms of Use; if you do not agree to these all of these
-            Terms of Use, do not use this Application.
-          </span>
+        <span>
+          application (“the Application”). By using the Application, you
+          agree to these Terms of Use; if you do not agree to these all of these
+          Terms of Use, do not use this Application.
+        </span>
         </p>
 
         <p>The Application is made available to you, as an individual person,
@@ -117,12 +117,14 @@
       var appNamePlaceholders = document.getElementsByClassName('app-name');
       var appNamePlaceholdersArray = Array.from(appNamePlaceholders);
 
-      appNamePlaceholdersArray.forEach((el) => {
-        if (appName) {
-          appName = decodeURI(appName);
-        }
+      if (appName) {
+        appName = decodeURI(appName);
+      } else {
+        appName = 'Demo Application';
+      }
 
-        el.innerHTML = `<b>${appName || 'Demo Application'}</b>`;
+      appNamePlaceholdersArray.forEach((el) => {
+        el.innerHTML = `<b>${appName}</b>`;
       });
     </script>
   </body>
